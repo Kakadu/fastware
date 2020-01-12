@@ -1,0 +1,10 @@
+(executable
+ (name main)
+ (libraries core_bench core)
+ (foreign_stubs (language c) (names file1)) )
+
+
+(rule
+ (targets ctest.exe)
+ ; (deps    (:gen ../generator/gen.exe))
+ (action  (run c++ -march=native -O3 -I/usr/include/benchmark  -o %{targets} cmain.cpp /usr/lib/x86_64-linux-gnu/libbenchmark.so)))
