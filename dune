@@ -1,5 +1,6 @@
 (executable
- (name main)
+ (name BCountDigits)
+ (modules BCountDigits)
  (libraries core_bench core)
  (foreign_stubs (language c) (names file1)) )
 
@@ -8,3 +9,21 @@
  (targets ctest.exe)
  ; (deps    (:gen ../generator/gen.exe))
  (action  (run c++ -march=native -O3 -g -I/usr/include/benchmark -o %{targets} cmain.cpp /usr/lib/x86_64-linux-gnu/libbenchmark.so -lpthread)))
+
+
+(executable
+  (name leven1)
+  (libraries core_bench core)
+  (modules leven1)
+)
+
+(rule
+  (targets levenC.exe)
+  (action  (run gcc -march=native -O3 levenC.c -o levenC.exe )))
+
+(executable
+ (name BListVsArray)
+ (modules BListVsArray)
+ (libraries core_bench core)
+ (ocamlopt_flags (:standard -S -g))
+)
