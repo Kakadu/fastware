@@ -1,0 +1,4 @@
+(executable
+ (name polycomp)
+ (libraries core_bench core)
+ (modules polycomp))
