@@ -8,7 +8,6 @@
 
 (rule
  (targets ctest.exe)
- ; (deps    (:gen ../generator/gen.exe))
  (action
   (run c++ -march=native -O3 -g -I/usr/include/benchmark -o %{targets}
     cmain.cpp /usr/lib/x86_64-linux-gnu/libbenchmark.so -lpthread)))
@@ -40,3 +39,9 @@
   (names flagsImpl))
  (ocamlopt_flags
   (:standard -S -g)))
+
+(rule
+ (targets msbpos.exe)
+ (deps msbpos.cpp)
+ (action
+  (run c++ -march=native -O3 -g -o %{targets} msbpos.cpp)))

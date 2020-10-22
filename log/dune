@@ -1,0 +1,4 @@
+(executable
+ (name log_main)
+ (libraries core_bench core)
+ (modules log_main))
