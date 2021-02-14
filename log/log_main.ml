@@ -1,19 +1,19 @@
-open Core
-(* open Core_bench *)
+open Base
 
 let () = Random.init 648
 
 let rec pp_bin ppf x =
-  if x<2 then Format.fprintf ppf "%d" x
+  if x < 2 then Format.fprintf ppf "%d" x
   else
-    let () = pp_bin ppf (x/2) in
-    Format.fprintf ppf "%d" (x%2)
+    let () = pp_bin ppf (x / 2) in
+    Format.fprintf ppf "%d" (x % 2)
 
 let check msg prog m expected =
   let rez = prog m in
-  if  rez <> expected
-  then failwith (Format.asprintf "Testing `%s` failed. returned %a <> expected %a"
-    msg pp_bin rez pp_bin expected)
+  if rez <> expected then
+    failwith
+      (Format.asprintf "Testing `%s` failed. returned %a <> expected %a" msg
+         pp_bin rez pp_bin expected)
 
 (* Returns value which contains only largest 1 *)
 let keepHighestBit n =
@@ -33,21 +33,20 @@ let () =
 
 (* returns logarithm base 2 of MSB *)
 let log_2_msb n =
-  assert (0<n && n<16);
+  assert (0 < n && n < 16);
   let rec helper acc x =
     let y = x lsr 1 in
-    if y>0 then helper (acc+1) y
-    else acc
+    if y > 0 then helper (acc + 1) y else acc
   in
   helper 0 n
 
 let log_2_msb_unrolled n =
-  assert (0<n && n<16);
+  assert (0 < n && n < 16);
   let acc = 0 in
-  let acc = if n lsr 0b0001 > 0 then acc+1 else acc in
-  let acc = if n lsr 0b0010 > 0 then acc+1 else acc in
-  let acc = if n lsr 0b0011 > 0 then acc+1 else acc in
-  let acc = if n lsr 0b0100 > 0 then acc+1 else acc in
+  let acc = if n lsr 0b0001 > 0 then acc + 1 else acc in
+  let acc = if n lsr 0b0010 > 0 then acc + 1 else acc in
+  let acc = if n lsr 0b0011 > 0 then acc + 1 else acc in
+  let acc = if n lsr 0b0100 > 0 then acc + 1 else acc in
   acc
 
 let smearing n =
@@ -58,14 +57,13 @@ let smearing n =
 
 (* https://stackoverflow.com/a/365068/1065436 *)
 let pow2roundup x =
-  assert (0<x && x<16);
-  let x = x-1 in
+  assert (0 < x && x < 16);
+  let x = x - 1 in
   let x = x lor (x lsr 1) in
   let x = x lor (x lsr 2) in
   let x = x lor (x lsr 4) in
   let x = x lor (x lsr 8) in
-  x+1
-
+  x + 1
 
 let () =
   check (Printf.sprintf "%d" __LINE__) log_2_msb 0b0010 0b0001;
@@ -88,7 +86,6 @@ let () =
   check (Printf.sprintf "%d" __LINE__) pow2roundup 0b0011 0b0100;
   check (Printf.sprintf "%d" __LINE__) pow2roundup 0b0100 0b0100;
   check (Printf.sprintf "%d" __LINE__) pow2roundup 0b1111 0b10000;
-
 
   ()
 

@@ -1,4 +1,4 @@
 (executable
  (name polycomp)
- (libraries core_bench core)
+ (libraries base benchmark)
  (modules polycomp))

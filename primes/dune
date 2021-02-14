@@ -1,0 +1,4 @@
+(executable
+ (name primes)
+ (libraries benchmark)
+ (modules primes))
