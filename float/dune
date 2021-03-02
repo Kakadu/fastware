@@ -1,0 +1,12 @@
+(executable
+ (name floats)
+ (libraries base benchmark)
+ (modules floats)
+ (foreign_stubs
+  (language cxx)
+  (flags
+   -march=native
+   -O3
+   -Wall
+   -I/home/kakadu/.opam/4.10.1+fp+flambda/include)
+  (names fast_float_caml)))
