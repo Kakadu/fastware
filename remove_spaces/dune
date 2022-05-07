@@ -1,0 +1,13 @@
+(library
+ (name lib1)
+ (modules lib1)
+ (libraries)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps ppx_expect ppx_inline_test)))
+
+(executable
+ (name remove_spaces)
+ (libraries lib1 benchmark)
+ (modules remove_spaces))
