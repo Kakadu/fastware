@@ -1,0 +1,13 @@
+(executable
+ (name insertion_bench)
+ (modules insertion_bench)
+ (libraries benchmark insertion))
+
+(library
+ (name insertion)
+ (modules insertion)
+ (ocamlopt_flags
+  (:standard -S))
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test ppx_expect)))
