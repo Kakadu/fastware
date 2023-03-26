@@ -1,0 +1,4 @@
+(executable
+ (name bench_str)
+ (modules bench_str)
+ (libraries benchmark))
