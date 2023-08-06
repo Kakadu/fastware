@@ -25,8 +25,8 @@ fib_m n = runCont (helper n) id
 
 main = defaultMain [
   bgroup "fib"
-    [ bench "expo"  $ whnf fib 10
-    , bench "cps"   $ whnf fib_cps 10
+    [ bench "direct" $ whnf fib 10
+    , bench "cps" $ whnf fib_cps 10
     , bench "cps_m" $ whnf fib_m 10
     --  , bench "11" $ whnf fib 11
     ]
