@@ -59,11 +59,12 @@ let () = assert (fib_cps_m 10 = 89)
 
 open Benchmark
 
-let iterations = 10L
+let iterations = 100L
 
 let () =
   let res =
-    throughputN ~repeat:1 10
+    (* throughputN ~repeat:1  *)
+    latencyN iterations
       (* latencyN iterations *)
       [ ("fib manual cps", fib_cps, 10); ("fib monadic cps", fib_cps_m, 10) ]
   in

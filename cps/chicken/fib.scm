@@ -28,5 +28,5 @@
 (print "(fibm 10) ==")
 (print  (fibm 10))
 
-(print (benchmark-run 10 (fib_cps 10)))
-(print (benchmark-run 10 (fibm 10)))
+(print (benchmark-run 1000 (fib_cps 10)))
+(print (benchmark-run 1000 (fibm 10)))

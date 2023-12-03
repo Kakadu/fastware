@@ -1,4 +1,4 @@
 .DEFAULT := run
 
 run:
-	cabal run bench-cps
+	cabal new-run bench-cps
