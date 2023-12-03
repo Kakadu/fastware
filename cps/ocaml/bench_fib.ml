@@ -59,7 +59,7 @@ let () = assert (fib_cps_m 10 = 89)
 
 open Benchmark
 
-let iterations = 100L
+let iterations = 10000L
 
 let () =
   let res =
