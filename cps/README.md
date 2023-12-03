@@ -38,13 +38,13 @@ variance introduced by outliers: 74% (severely inflated)
 
 ```
 Latencies for 10000 iterations of "fib manual cps", "fib monadic cps":
- fib manual cps:  0.03 WALL ( 0.01 usr +  0.01 sys =  0.03 CPU) @ 386458.49/s (n=10000)
+ fib manual cps:  0.00 WALL ( 0.00 usr +  0.00 sys =  0.00 CPU) @ 2197802.20/s (n=10000)
                  (warning: too few iterations for a reliable count)
-fib monadic cps:  0.04 WALL ( 0.04 usr +  0.00 sys =  0.04 CPU) @ 271946.05/s (n=10000)
+fib monadic cps:  0.02 WALL ( 0.02 usr +  0.00 sys =  0.02 CPU) @ 620039.68/s (n=10000)
                  (warning: too few iterations for a reliable count)
-                    Rate fib monadic cps  fib manual cps
-fib monadic cps 271946/s              --            -30%
- fib manual cps 386458/s             42%              --
+                     Rate fib monadic cps  fib manual cps
+fib monadic cps  620040/s              --            -72%
+ fib manual cps 2197802/s            254%              --
 ```
 
 #### Racket

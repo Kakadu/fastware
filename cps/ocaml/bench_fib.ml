@@ -62,6 +62,8 @@ open Benchmark
 let iterations = 10000L
 
 let () =
+  (* Printf.printf "custom_minor_max_size = %d\n\n"
+     Gc.((get ()).custom_minor_max_size); *)
   let res =
     (* throughputN ~repeat:1  *)
     latencyN iterations
