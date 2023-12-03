@@ -34,15 +34,17 @@ variance introduced by outliers: 74% (severely inflated)
 
 #### OCaml
 
+    OCAMLRUNPARAM='v=0x400,s=10M' dune exec ./bench_fib.exe --profile=release
+
 ```
-Latencies for 100 iterations of "fib manual cps", "fib monadic cps":
-fib manual cps:  0.00 WALL ( 0.00 usr +  0.00 sys =  0.00 CPU) @ 505050.51/s (n=100)
+Latencies for 10000 iterations of "fib manual cps", "fib monadic cps":
+ fib manual cps:  0.03 WALL ( 0.01 usr +  0.01 sys =  0.03 CPU) @ 386458.49/s (n=10000)
                  (warning: too few iterations for a reliable count)
-fib monadic cps:  0.00 WALL ( 0.00 usr +  0.00 sys =  0.00 CPU) @ 212765.96/s (n=100)
+fib monadic cps:  0.04 WALL ( 0.04 usr +  0.00 sys =  0.04 CPU) @ 271946.05/s (n=10000)
                  (warning: too few iterations for a reliable count)
                     Rate fib monadic cps  fib manual cps
-fib monadic cps 212766/s              --            -58%
-fib manual cps 505051/s            137%
+fib monadic cps 271946/s              --            -30%
+ fib manual cps 386458/s             42%              --
 ```
 
 #### Racket
