@@ -42,6 +42,14 @@ let fib_cps1 =
   in
   fun n -> helper n Fun.id
 
+let fib_cps2_bad =
+  let rec helper n =
+    if n <= 1 then fun k -> k 1
+    else fun k ->
+      helper (n - 1) (fun p1 -> helper (n - 2) (fun p2 -> k (p1 + p2)))
+  in
+  fun n -> helper n Fun.id
+
 let fib_cps_m n =
   let open Cont in
   let open Cont.Syntax in
@@ -68,6 +76,10 @@ let () =
     (* throughputN ~repeat:1  *)
     latencyN iterations
       (* latencyN iterations *)
-      [ ("fib manual cps", fib_cps1, 10); ("fib monadic cps", fib_cps_m, 10) ]
+      [
+        ("fib manual cps", fib_cps1, 10);
+        ("fib Bad manual cps", fib_cps2_bad, 10);
+        ("fib monadic cps", fib_cps_m, 10);
+      ]
   in
   tabulate res
