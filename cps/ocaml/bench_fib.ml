@@ -50,6 +50,16 @@ let fib_cps2_bad =
   in
   fun n -> helper n Fun.id
 
+(* https://discuss.ocaml.org/t/manual-cps-is-faster-than-cps-monad-is-it-expected/13560/6?u=kakadu *)
+let fib_cps3 =
+  let rec helper n =
+    if n <= 1 then fun k -> k 1
+    else
+      let h = helper (n - 1) in
+      fun k -> h (fun p1 -> helper (n - 2) (fun p2 -> k (p1 + p2)))
+  in
+  fun n -> helper n Fun.id
+
 let fib_cps_m n =
   let open Cont in
   let open Cont.Syntax in
@@ -72,14 +82,16 @@ let iterations = 10000L
 let () =
   (* Printf.printf "custom_minor_max_size = %d\n\n"
      Gc.((get ()).custom_minor_max_size); *)
+  let num_count = 10 in
   let res =
     (* throughputN ~repeat:1  *)
     latencyN iterations
       (* latencyN iterations *)
       [
-        ("fib manual cps", fib_cps1, 10);
-        ("fib Bad manual cps", fib_cps2_bad, 10);
-        ("fib monadic cps", fib_cps_m, 10);
+        ("fib manual cps", fib_cps1, num_count);
+        ("fib Bad manual cps", fib_cps2_bad, num_count);
+        ("fib cps 3 SkySkimmer", fib_cps3, num_count);
+        ("fib monadic cps", fib_cps_m, num_count);
       ]
   in
   tabulate res
