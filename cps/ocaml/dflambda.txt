@@ -1,0 +1,1351 @@
+End of middle end:
+import_symbol camlBenchmark__const_immstring_472
+import_symbol camlBenchmark__const_immstring_861
+import_symbol camlBenchmark__const_immstring_910
+import_symbol camlBenchmark__const_block_1492
+import_symbol camlBenchmark__const_immstring_1586
+import_symbol camlBenchmark__const_block_1594
+import_symbol camlBenchmark__const_block_1596
+import_symbol camlBenchmark__const_immstring_1655
+import_symbol camlBenchmark__const_block_1663
+import_symbol camlBenchmark__const_immstring_1696
+import_symbol camlBenchmark__const_block_1699
+import_symbol camlStdlib__Pccall_1851
+import_symbol camlStdlib__String__Pmakeblock_2468
+import_symbol camlStdlib__Bytes__Pmakeblock_6603
+import_symbol camlCamlinternalFormat__set_of_closures_15530
+import_symbol camlStdlib__failwith_323_closure
+import_symbol camlStdlib__^_456_closure
+import_symbol camlBenchmark__timeit_810_closure
+import_symbol camlStdlib__Printf__anon_fn[printf.ml:41,27--39]_252_closure
+import_symbol camlBenchmark__to_string_inner_240_closure
+import_symbol caml_exn_Assert_failure
+import_symbol camlBenchmark__latency_943_closure
+import_symbol camlStdlib__Printf__ksprintf_207_closure
+import_symbol camlStdlib__Printf__anon_fn[printf.ml:20,14--48]_410_closure
+import_symbol camlCamlinternalFormat__string_to_caml_string_4450_closure
+import_symbol camlStdlib__String__sum_lengths_295_closure
+import_symbol camlStdlib__Bytes__make_272_closure
+import_symbol camlStdlib__String__unsafe_blits_332_closure
+import_symbol camlCamlinternalFormat__make_printf_4967_closure
+import_symbol camlStdlib__List__map_469_closure
+import_symbol camlBenchmark__tabulate_inner_2526_closure
+import_symbol camlStdlib__max_387_closure
+import_symbol camlCamlinternalFormat__strput_acc_6585_closure
+import_symbol camlStdlib
+import_symbol camlStdlib__output_string_763_closure
+let_symbol
+  (camlDune__exe__Bench_fib__const_immstring_215
+    (Allocated_const #"cps/ocaml/bench_fib.ml"))
+  (camlDune__exe__Bench_fib__const_block_197 (Block (tag 0,
+    camlDune__exe__Bench_fib__const_immstring_215 57 9)))
+  (camlDune__exe__Bench_fib__const_block_216 (Block (tag 0,
+    camlDune__exe__Bench_fib__const_immstring_215 58 9)))
+  (camlDune__exe__Bench_fib__const_immstring_232
+    (Allocated_const #"fib manual cps"))
+  (camlDune__exe__Bench_fib__const_immstring_238
+    (Allocated_const #"fib monadic cps"))
+  (camlDune__exe__Bench_fib__return_271
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1102
+        (return/15 = fun x/18 k/17 ->
+          (apply<{cps/ocaml/bench_fib.ml:24,43-46}> k/17 x/18))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.1])))
+  (camlDune__exe__Bench_fib__>>=_272
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1194
+        (>>=/23 = fun x/27 f/26 k/25 ->
+          (let
+            (set_of_closures/30
+               (set_of_closures id=Dune__exe__Bench_fib.1193
+                 (anon_fn[bench_fib.ml:27,30--53]/29 = fun v/33 ->
+                   (apply<{cps/ocaml/bench_fib.ml:27,40-52}> f/31 v/33 k/32))
+                  free_vars={ f/31 -rename-> f/26 k/32 -rename-> k/25 }
+                 specialised_args={}) direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.2]
+             anon_fn[bench_fib.ml:27,30--53]/36
+               (project_closure anon_fn[bench_fib.ml:27,30--53]/29 from
+                 set_of_closures/30))
+            (apply<{cps/ocaml/bench_fib.ml:27,23-53}> x/27
+              anon_fn[bench_fib.ml:27,30--53]/36)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.3])))
+  (camlDune__exe__Bench_fib__run_cont_273
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1105
+        (run_cont/45 *inline* = fun f/48 param/47 ->
+          (apply<{cps/ocaml/bench_fib.ml:31,28-34}> param/47 f/48))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.4])))
+  (camlDune__exe__Bench_fib__>>=_23_closure
+    (Project_closure (camlDune__exe__Bench_fib__>>=_272, >>=/23)))
+  (camlDune__exe__Bench_fib__Syntax_274 (Block (tag 0,
+    camlDune__exe__Bench_fib__>>=_23_closure)))
+
+let_rec_symbol
+  (camlDune__exe__Bench_fib__helper_57_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_275, helper/57)))
+  (camlDune__exe__Bench_fib__set_of_closures_275
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1245
+        (helper/57 = fun n/60 k/59 ->
+          (let
+            (Pintcomp_arg/63 Const(1)
+             Pintcomp/64
+               (<=<{cps/ocaml/bench_fib.ml:40,7-13}> n/60 Pintcomp_arg/63))
+            (if Pintcomp/64 then begin
+              (let (apply_arg/97 Const(1))
+                (apply<{cps/ocaml/bench_fib.ml:40,19-22}> k/59 apply_arg/97))
+              end else begin
+              (let
+                (set_of_closures/70
+                   (set_of_closures id=Dune__exe__Bench_fib.1244
+                     (anon_fn[bench_fib.ml:41,24--74]/69 = fun p1/74 ->
+                       (let
+                         (set_of_closures/80
+                            (set_of_closures id=Dune__exe__Bench_fib.1195
+                              (anon_fn[bench_fib.ml:41,50--73]/79 =
+                                fun p2/83 ->
+                                (let
+                                  (apply_arg/86
+                                     (+<{cps/ocaml/bench_fib.ml:41,63-72}>
+                                       p1/82 p2/83))
+                                  (apply<{cps/ocaml/bench_fib.ml:41,61-72}>
+                                    k/81 apply_arg/86)))
+                               free_vars={ k/81 -rename-> k/73
+                                 p1/82 -rename-> p1/74 }
+                              specialised_args={}) direct_call_surrogates={ }
+                              set_of_closures_origin=Dune__exe__Bench_fib.5]
+                          anon_fn[bench_fib.ml:41,50--73]/88
+                            (project_closure
+                              anon_fn[bench_fib.ml:41,50--73]/79 from
+                              set_of_closures/80)
+                          Psubint_arg/77 Const(2)
+                          Psubint/78
+                            (-<{cps/ocaml/bench_fib.ml:41,42-49}> n/72
+                              Psubint_arg/77)
+                          apply_funct/91
+                            camlDune__exe__Bench_fib__helper_57_closure)
+                         (apply*[helper/57]<{cps/ocaml/bench_fib.ml:41,35-73}>
+                           apply_funct/91 Psubint/78
+                           anon_fn[bench_fib.ml:41,50--73]/88)))
+                      free_vars={ n/72 -rename-> n/60 k/73 -rename-> k/59 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Dune__exe__Bench_fib.6]
+                 anon_fn[bench_fib.ml:41,24--74]/92
+                   (project_closure anon_fn[bench_fib.ml:41,24--74]/69 from
+                     set_of_closures/70)
+                 Psubint_arg/67 Const(1)
+                 Psubint/68
+                   (-<{cps/ocaml/bench_fib.ml:41,16-23}> n/60 Psubint_arg/67)
+                 apply_funct/95 camlDune__exe__Bench_fib__helper_57_closure)
+                (apply*[helper/57]<{cps/ocaml/bench_fib.ml:41,9-74}>
+                  apply_funct/95 Psubint/68
+                  anon_fn[bench_fib.ml:41,24--74]/92))
+              end)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.7])))
+
+let_symbol
+  (camlDune__exe__Bench_fib__set_of_closures_276
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1247
+        (anon_fn[bench_fib.ml:43,2--26]/99 = fun n/102 ->
+          (let
+            (Pintcomp_arg/3734 Const(1)
+             Pintcomp/3735
+               (<=<{cps/ocaml/bench_fib.ml:43,11-26;cps/ocaml/bench_fib.ml:40,7-13}>
+                 n/102 Pintcomp_arg/3734))
+            (if Pintcomp/3735 then begin
+              (let (const_one/8559 Const(1)) const_one/8559) end else begin
+              (let
+                (set_of_closures/3758
+                   (set_of_closures id=Dune__exe__Bench_fib.1246
+                     (anon_fn[bench_fib.ml:41,24--74]/3744 = fun p1/3745 ->
+                       (let
+                         (set_of_closures/3753
+                            (set_of_closures id=Dune__exe__Bench_fib.1199
+                              (anon_fn[bench_fib.ml:41,50--73]/3748 =
+                                fun p2/3749 ->
+                                (let
+                                  (apply_arg/3750
+                                     (+<{cps/ocaml/bench_fib.ml:41,63-72}>
+                                       p1/3747 p2/3749))
+                                  apply_arg/3750))
+                               free_vars={ p1/3747 -rename-> p1/3745 }
+                              specialised_args={}) direct_call_surrogates={ }
+                              set_of_closures_origin=Dune__exe__Bench_fib.5]
+                          anon_fn[bench_fib.ml:41,50--73]/3754
+                            (project_closure
+                              anon_fn[bench_fib.ml:41,50--73]/3748 from
+                              set_of_closures/3753)
+                          Psubint_arg/3755 Const(2)
+                          Psubint/3756
+                            (-<{cps/ocaml/bench_fib.ml:41,42-49}> n/3742
+                              Psubint_arg/3755)
+                          apply_funct/3757
+                            camlDune__exe__Bench_fib__helper_57_closure)
+                         (apply*[helper/57]<{cps/ocaml/bench_fib.ml:41,35-73}>
+                           apply_funct/3757 Psubint/3756
+                           anon_fn[bench_fib.ml:41,50--73]/3754)))
+                      free_vars={ n/3742 -rename-> n/102 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Dune__exe__Bench_fib.6]
+                 anon_fn[bench_fib.ml:41,24--74]/3759
+                   (project_closure anon_fn[bench_fib.ml:41,24--74]/3744 from
+                     set_of_closures/3758)
+                 Psubint_arg/3760 Const(1)
+                 Psubint/3761
+                   (-<{cps/ocaml/bench_fib.ml:43,11-26;cps/ocaml/bench_fib.ml:41,16-23}>
+                     n/102 Psubint_arg/3760)
+                 apply_funct/3762 camlDune__exe__Bench_fib__helper_57_closure)
+                (apply*[helper/57]<{cps/ocaml/bench_fib.ml:43,11-26;cps/ocaml/bench_fib.ml:41,9-74}>
+                  apply_funct/3762 Psubint/3761
+                  anon_fn[bench_fib.ml:41,24--74]/3759))
+              end)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.9])))
+  (camlDune__exe__Bench_fib__set_of_closures_278
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1113
+        (anon_fn[bench_fib.ml:55,11--17]/173 *stub* = fun prim/175 ->
+          prim/175)
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.13])))
+  (camlDune__exe__Bench_fib__Pmakeblock_279 (Block (tag 0,
+    caml_exn_Assert_failure camlDune__exe__Bench_fib__const_block_197)))
+  (camlDune__exe__Bench_fib__Pmakeblock_280 (Block (tag 0,
+    caml_exn_Assert_failure camlDune__exe__Bench_fib__const_block_216)))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:43,2--26]_99_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_276, anon_fn[bench_fib.ml:43,2--26]/99)))
+  (camlDune__exe__Bench_fib__dup_set_of_closures_8607
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1277
+        (fold_left/4512 = fun accu/4498 l/4497 ->
+          (let (cond/4500 (isint<{list.ml:120,4-6}> l/4497))
+            (if cond/4500 then begin accu/4498 end else begin
+              (let
+                (apply_arg/4501 (field 1<{list.ml:121,4-8}> l/4497)
+                 apply_arg/4502 (field 0<{list.ml:121,4-8}> l/4497)
+                 Pstringlength_arg/4509
+                   (field 0<{list.ml:121,24-34;src/benchmark.ml:312,26-33}>
+                     apply_arg/4502)
+                 Pstringlength/4510
+                   (string.length<{list.ml:121,24-34;src/benchmark.ml:312,43-60}>
+                     Pstringlength_arg/4509)
+                 Pfield/4511 camlStdlib__max_387_closure
+                 apply_arg/4503
+                   *(apply*[Stdlib.max/387]<{list.ml:121,24-34;src/benchmark.ml:312,37-60}>
+                      Pfield/4511 accu/4498 Pstringlength/4510))
+                (apply*[fold_left/4512]<{list.ml:121,12-36;list.ml:118,18-95}>
+                  fold_left/4512 apply_arg/4503 apply_arg/4501))
+              end)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Stdlib__List._24])))
+  (camlDune__exe__Bench_fib__fold_left_4512_closure
+    (Project_closure (camlDune__exe__Bench_fib__dup_set_of_closures_8607, fold_left/4512)))
+  (camlDune__exe__Bench_fib__Pbintcomp_arg_8612 (Allocated_const 1000L))
+  (camlDune__exe__Bench_fib__Pfloatcomp_arg_8611 (Allocated_const 1.000000))
+  (camlDune__exe__Bench_fib__const_boxed_int_8610 (Allocated_const 4L))
+  (camlDune__exe__Bench_fib__const_float_8609 (Allocated_const 0.400000))
+  (camlDune__exe__Bench_fib__n_8608 (Allocated_const 10000L))
+  (camlDune__exe__Bench_fib__k'_8604
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1263
+        (k'/4290 = fun acc/4291 ->
+          (let
+            (n/4292 Const(64)
+             s/4293
+               (caml_create_bytes<{printf.ml:36,14-30;buffer.ml:34,9-23}>
+                 n/4292)
+             Pmakeblock_arg/4294 Const(0)
+             Pmakeblock/4295
+               (makemutable 0 (*,int,int,*)<{printf.ml:36,14-30;buffer.ml:35,1-59}>
+                 s/4293 Pmakeblock_arg/4294 n/4292 s/4293)
+             Pfield/4296 camlCamlinternalFormat__strput_acc_6585_closure
+             sequence/4297
+               *(apply*[CamlinternalFormat.strput_acc/6585]<{printf.ml:37,4-22}>
+                  Pfield/4296 Pmakeblock/4295 acc/4291)
+             apply_arg/4298
+               (field 1<{printf.ml:38,6-27;buffer.ml:37,45-55}>
+                 Pmakeblock/4295)
+             apply_arg/4299
+               (field 0<{printf.ml:38,6-27;buffer.ml:37,34-42}>
+                 Pmakeblock/4295)
+             ofs/4300 Const(0)
+             Pintcomp_arg/4301 Const(0)
+             Pintcomp/4302
+               (<<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,16-23}>
+                 apply_arg/4298 Pintcomp_arg/4301)
+             cond/4308
+               *(if Pintcomp/4302 then begin
+                  (let (const_one/8573 Const(1)) const_one/8573)
+                  end else begin
+                  (let
+                    (Psubint_arg/4305
+                       (bytes.length<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,33-41}>
+                         apply_arg/4299)
+                     Psubint/4306
+                       (-<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,33-47}>
+                         Psubint_arg/4305 apply_arg/4298)
+                     Pintcomp/4307
+                       (><{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,27-47}>
+                         ofs/4300 Psubint/4306))
+                    Pintcomp/4307)
+                  end)
+             apply_arg/4314
+               *(if cond/4308 then begin
+                  (let
+                    (Pmakeblock/4309 camlStdlib__Bytes__Pmakeblock_6603
+                     raise/4310
+                       (raise<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:66,7-43;stdlib.ml:30,20-45}>
+                         Pmakeblock/4309))
+                    raise/4310)
+                  end else begin
+                  (let
+                    (r/4311
+                       (caml_create_bytes<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:68,12-22}>
+                         apply_arg/4298)
+                     Pccall_arg/4312 Const(0)
+                     Pccall/4313
+                       (caml_blit_bytes<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:69,4-29}>
+                         apply_arg/4299 ofs/4300 r/4311 Pccall_arg/4312
+                         apply_arg/4298))
+                    r/4311)
+                  end))
+            apply_arg/4314))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Stdlib__Printf._16])))
+  (camlDune__exe__Bench_fib__k'_4290_closure
+    (Project_closure (camlDune__exe__Bench_fib__k'_8604, k'/4290)))
+  (camlDune__exe__Bench_fib__Pmakeblock_8605 (Block (tag 2,  0
+    camlBenchmark__const_immstring_1696)))
+  (camlDune__exe__Bench_fib__k'_8601
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1272
+        (k'/3994 = fun acc/3995 ->
+          (let
+            (n/3996 Const(64)
+             s/3997
+               (caml_create_bytes<{printf.ml:36,14-30;buffer.ml:34,9-23}>
+                 n/3996)
+             Pmakeblock_arg/3998 Const(0)
+             Pmakeblock/3999
+               (makemutable 0 (*,int,int,*)<{printf.ml:36,14-30;buffer.ml:35,1-59}>
+                 s/3997 Pmakeblock_arg/3998 n/3996 s/3997)
+             Pfield/4000 camlCamlinternalFormat__strput_acc_6585_closure
+             sequence/4001
+               *(apply*[CamlinternalFormat.strput_acc/6585]<{printf.ml:37,4-22}>
+                  Pfield/4000 Pmakeblock/3999 acc/3995)
+             apply_arg/4002
+               (field 1<{printf.ml:38,6-27;buffer.ml:37,45-55}>
+                 Pmakeblock/3999)
+             apply_arg/4003
+               (field 0<{printf.ml:38,6-27;buffer.ml:37,34-42}>
+                 Pmakeblock/3999)
+             ofs/4004 Const(0)
+             Pintcomp_arg/4005 Const(0)
+             Pintcomp/4006
+               (<<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,16-23}>
+                 apply_arg/4002 Pintcomp_arg/4005)
+             cond/4012
+               *(if Pintcomp/4006 then begin
+                  (let (const_one/8568 Const(1)) const_one/8568)
+                  end else begin
+                  (let
+                    (Psubint_arg/4009
+                       (bytes.length<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,33-41}>
+                         apply_arg/4003)
+                     Psubint/4010
+                       (-<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,33-47}>
+                         Psubint_arg/4009 apply_arg/4002)
+                     Pintcomp/4011
+                       (><{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:65,27-47}>
+                         ofs/4004 Psubint/4010))
+                    Pintcomp/4011)
+                  end)
+             apply_arg/4018
+               *(if cond/4012 then begin
+                  (let
+                    (Pmakeblock/4013 camlStdlib__Bytes__Pmakeblock_6603
+                     raise/4014
+                       (raise<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:66,7-43;stdlib.ml:30,20-45}>
+                         Pmakeblock/4013))
+                    raise/4014)
+                  end else begin
+                  (let
+                    (r/4015
+                       (caml_create_bytes<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:68,12-22}>
+                         apply_arg/4002)
+                     Pccall_arg/4016 Const(0)
+                     Pccall/4017
+                       (caml_blit_bytes<{printf.ml:38,6-27;buffer.ml:37,17-55;bytes.ml:73,44-59;bytes.ml:69,4-29}>
+                         apply_arg/4003 ofs/4004 r/4015 Pccall_arg/4016
+                         apply_arg/4002))
+                    r/4015)
+                  end))
+            apply_arg/4018))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Stdlib__Printf._16])))
+  (camlDune__exe__Bench_fib__k'_3994_closure
+    (Project_closure (camlDune__exe__Bench_fib__k'_8601, k'/3994)))
+  (camlDune__exe__Bench_fib__dup_set_of_closures_3685
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1256
+        (map/1229 = fun param/1232 ->
+          (let (cond/1234 (isint<{list.ml:91,4-6}> param/1232))
+            (if cond/1234 then begin
+              (let (const_zero/8560 Const(0)) const_zero/8560) end else begin
+              (let
+                (apply_arg/1237 (field 0<{list.ml:92,4-8}> param/1232)
+                 param/1243 (field 0<{list.ml:92,20-23}> apply_arg/1237)
+                 apply_arg/1263 camlBenchmark__const_block_1596
+                 apply_arg/1264
+                   camlStdlib__Printf__anon_fn[printf.ml:41,27--39]_252_closure
+                 apply_funct/1265 camlStdlib__Printf__ksprintf_207_closure
+                 full_apply/1266
+                   *(apply*[Stdlib__Printf.ksprintf/207]<{list.ml:92,20-23;src/benchmark.ml:324,47-61;printf.ml:41,18-43}>
+                      apply_funct/1265 apply_arg/1264 apply_arg/1263)
+                 r/1244
+                   *(apply<{list.ml:92,20-23;src/benchmark.ml:324,47-61}>
+                      full_apply/1266 param/1243)
+                 apply_arg/1245 (field 1<{list.ml:92,4-8}> param/1232)
+                 Pmakeblock_arg/1250
+                   *(apply*[map/1229]<{list.ml:92,32-39;list.ml:90,12-77}>
+                      map/1229 apply_arg/1245)
+                 Pmakeblock/1251
+                   (makeblock 0<{list.ml:92,27-39}> r/1244
+                     Pmakeblock_arg/1250))
+                Pmakeblock/1251)
+              end)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Stdlib__List._16])))
+  (camlDune__exe__Bench_fib__map_1229_closure
+    (Project_closure (camlDune__exe__Bench_fib__dup_set_of_closures_3685, map/1229)))
+  (camlDune__exe__Bench_fib__return_15_closure
+    (Project_closure (camlDune__exe__Bench_fib__return_271, return/15)))
+  (camlDune__exe__Bench_fib__set_of_closures_1098
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1255
+        (return/361 *stub* = fun k/364 ->
+          (let
+            (apply_funct/368 camlDune__exe__Bench_fib__return_15_closure
+             x/369 Const(1))
+            (apply*[return/15]<{cps/ocaml/bench_fib.ml:49,19-27}>
+              apply_funct/368 x/369 k/364)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.92])))
+  (camlDune__exe__Bench_fib__return_361_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_1098, return/361)))
+
+let_rec_symbol
+  (camlDune__exe__Bench_fib__helper_119_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_1097, helper/119)))
+  (camlDune__exe__Bench_fib__set_of_closures_1097
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1254
+        (helper/119 = fun n/122 ->
+          (let
+            (Pintcomp_arg/125 Const(1)
+             Pintcomp/126
+               (<=<{cps/ocaml/bench_fib.ml:49,7-13}> n/122 Pintcomp_arg/125))
+            (if Pintcomp/126 then begin
+              (let
+                (project_closure/366
+                   camlDune__exe__Bench_fib__return_361_closure)
+                project_closure/366)
+              end else begin
+              (let
+                (set_of_closures/134
+                   (set_of_closures id=Dune__exe__Bench_fib.1252
+                     (anon_fn[bench_fib.ml:52,6--53]/133 = fun l/138 ->
+                       (let
+                         (helper/1104
+                            camlDune__exe__Bench_fib__helper_119_closure
+                          set_of_closures/146
+                            (set_of_closures id=Dune__exe__Bench_fib.1250
+                              (anon_fn[bench_fib.ml:53,6--20]/145 =
+                                fun r/149 ->
+                                (let
+                                  (apply_arg/152
+                                     (+<{cps/ocaml/bench_fib.ml:53,13-20}>
+                                       l/148 r/149)
+                                   set_of_closures/378
+                                     (set_of_closures id=Dune__exe__Bench_fib.1249
+                                       (return/374 *stub* = fun k/377 ->
+                                         (let
+                                           (apply_funct/380
+                                              camlDune__exe__Bench_fib__return_15_closure)
+                                           (apply*[return/15]<{cps/ocaml/bench_fib.ml:53,6-20}>
+                                             apply_funct/380 x/376 k/377)))
+                                        free_vars={
+                                          x/376 -rename-> apply_arg/152 }
+                                       specialised_args={})
+                                       direct_call_surrogates={ }
+                                       set_of_closures_origin=Dune__exe__Bench_fib.94]
+                                   project_closure/379
+                                     (project_closure return/374 from
+                                       set_of_closures/378))
+                                  project_closure/379))
+                               free_vars={ l/148 -rename-> l/138 }
+                              specialised_args={}) direct_call_surrogates={ }
+                              set_of_closures_origin=Dune__exe__Bench_fib.10]
+                          anon_fn[bench_fib.ml:53,6--20]/155
+                            (project_closure
+                              anon_fn[bench_fib.ml:53,6--20]/145 from
+                              set_of_closures/146)
+                          Psubint_arg/141 Const(2)
+                          Psubint/142
+                            (-<{cps/ocaml/bench_fib.ml:52,22-29}> n/137
+                              Psubint_arg/141)
+                          apply_arg/157
+                            *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:52,15-29}>
+                               helper/1104 Psubint/142)
+                          set_of_closures/391
+                            (set_of_closures id=Dune__exe__Bench_fib.1251
+                              (>>=/386 *stub* = fun k/390 ->
+                                (let
+                                  (Pfield/393
+                                     camlDune__exe__Bench_fib__>>=_23_closure)
+                                  (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:52,6-53}>
+                                    Pfield/393 x/388 f/389 k/390)))
+                               free_vars={ x/388 -rename-> apply_arg/157
+                                 f/389 -rename-> anon_fn[bench_fib.ml:53,6--20]/155
+                                 }
+                              specialised_args={}) direct_call_surrogates={ }
+                              set_of_closures_origin=Dune__exe__Bench_fib.97]
+                          project_closure/392
+                            (project_closure >>=/386 from
+                              set_of_closures/391))
+                         project_closure/392))
+                      free_vars={ n/137 -rename-> n/122 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Dune__exe__Bench_fib.11]
+                 anon_fn[bench_fib.ml:52,6--53]/162
+                   (project_closure anon_fn[bench_fib.ml:52,6--53]/133 from
+                     set_of_closures/134)
+                 Psubint_arg/129 Const(1)
+                 Psubint/130
+                   (-<{cps/ocaml/bench_fib.ml:51,22-29}> n/122
+                     Psubint_arg/129)
+                 apply_arg/164
+                   *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:51,15-29}>
+                      helper/119 Psubint/130)
+                 set_of_closures/404
+                   (set_of_closures id=Dune__exe__Bench_fib.1253
+                     (>>=/399 *stub* = fun k/403 ->
+                       (let
+                         (Pfield/406 camlDune__exe__Bench_fib__>>=_23_closure)
+                         (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:51,6-86}>
+                           Pfield/406 x/401 f/402 k/403)))
+                      free_vars={ x/401 -rename-> apply_arg/164
+                        f/402 -rename-> anon_fn[bench_fib.ml:52,6--53]/162 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Dune__exe__Bench_fib.100]
+                 project_closure/405
+                   (project_closure >>=/399 from set_of_closures/404))
+                project_closure/405)
+              end)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.12])))
+
+let_symbol
+  (camlDune__exe__Bench_fib__set_of_closures_8600
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1261
+        (anon_fn[bench_fib.ml:52,6--53]/3930 = fun l/3931 ->
+          (let
+            (helper/3932 camlDune__exe__Bench_fib__helper_119_closure
+             set_of_closures/3943
+               (set_of_closures id=Dune__exe__Bench_fib.1259
+                 (anon_fn[bench_fib.ml:53,6--20]/3934 = fun r/3935 ->
+                   (let
+                     (apply_arg/3936
+                        (+<{cps/ocaml/bench_fib.ml:53,13-20}> l/3933 r/3935)
+                      set_of_closures/3941
+                        (set_of_closures id=Dune__exe__Bench_fib.1258
+                          (return/3938 *stub* = fun k/3939 ->
+                            (let
+                              (apply_funct/3940
+                                 camlDune__exe__Bench_fib__return_15_closure)
+                              (apply*[return/15]<{cps/ocaml/bench_fib.ml:53,6-20}>
+                                apply_funct/3940 x/3937 k/3939)))
+                           free_vars={ x/3937 -rename-> apply_arg/3936 }
+                          specialised_args={}) direct_call_surrogates={ }
+                          set_of_closures_origin=Dune__exe__Bench_fib.94]
+                      project_closure/3942
+                        (project_closure return/3938 from
+                          set_of_closures/3941))
+                     project_closure/3942))
+                  free_vars={ l/3933 -rename-> l/3931 } specialised_args={})
+                 direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.10]
+             anon_fn[bench_fib.ml:53,6--20]/3944
+               (project_closure anon_fn[bench_fib.ml:53,6--20]/3934 from
+                 set_of_closures/3943)
+             Psubint/3948 Const(6)
+             apply_arg/3949
+               *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:52,15-29}>
+                  helper/3932 Psubint/3948)
+             set_of_closures/3955
+               (set_of_closures id=Dune__exe__Bench_fib.1260
+                 (>>=/3952 *stub* = fun k/3953 ->
+                   (let
+                     (Pfield/3954 camlDune__exe__Bench_fib__>>=_23_closure)
+                     (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:52,6-53}>
+                       Pfield/3954 x/3950 f/3951 k/3953)))
+                  free_vars={ x/3950 -rename-> apply_arg/3949
+                    f/3951 -rename-> anon_fn[bench_fib.ml:53,6--20]/3944 }
+                 specialised_args={}) direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.97]
+             project_closure/3956
+               (project_closure >>=/3952 from set_of_closures/3955))
+            project_closure/3956))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.11])))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3930_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_8600, anon_fn[bench_fib.ml:52,6--53]/3930)))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:55,11--17]_173_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_278, anon_fn[bench_fib.ml:55,11--17]/173)))
+  (camlDune__exe__Bench_fib__set_of_closures_8599
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1316
+        (anon_fn[bench_fib.ml:27,30--53]/3890 = fun v/3891 ->
+          (let
+            (helper/3899 camlDune__exe__Bench_fib__helper_119_closure
+             set_of_closures/3910
+               (set_of_closures id=Dune__exe__Bench_fib.1265
+                 (anon_fn[bench_fib.ml:53,6--20]/3901 = fun r/3902 ->
+                   (let
+                     (apply_arg/3903
+                        (+<{cps/ocaml/bench_fib.ml:53,13-20}> l/3900 r/3902)
+                      set_of_closures/3908
+                        (set_of_closures id=Dune__exe__Bench_fib.1264
+                          (return/3905 *stub* = fun k/3906 ->
+                            (let
+                              (apply_funct/3907
+                                 camlDune__exe__Bench_fib__return_15_closure)
+                              (apply*[return/15]<{cps/ocaml/bench_fib.ml:53,6-20}>
+                                apply_funct/3907 x/3904 k/3906)))
+                           free_vars={ x/3904 -rename-> apply_arg/3903 }
+                          specialised_args={}) direct_call_surrogates={ }
+                          set_of_closures_origin=Dune__exe__Bench_fib.94]
+                      project_closure/3909
+                        (project_closure return/3905 from
+                          set_of_closures/3908))
+                     project_closure/3909))
+                  free_vars={ l/3900 -rename-> v/3891 } specialised_args={})
+                 direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.10]
+             anon_fn[bench_fib.ml:53,6--20]/3911
+               (project_closure anon_fn[bench_fib.ml:53,6--20]/3901 from
+                 set_of_closures/3910)
+             set_of_closures/3957
+               camlDune__exe__Bench_fib__set_of_closures_8600
+             anon_fn[bench_fib.ml:52,6--53]/3958
+               camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3930_closure
+             Psubint/3960 Const(7)
+             apply_arg/3961
+               *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:27,40-52;cps/ocaml/bench_fib.ml:52,15-29;cps/ocaml/bench_fib.ml:51,15-29}>
+                  helper/3899 Psubint/3960)
+             set_of_closures/3967
+               (set_of_closures id=Dune__exe__Bench_fib.1315
+                 (>>=/3964 *stub* = fun k/3965 ->
+                   (let
+                     (f/8615
+                        camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3930_closure
+                      Pfield/3966 camlDune__exe__Bench_fib__>>=_23_closure)
+                     (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:51,6-86}>
+                       Pfield/3966 x/3962 f/8615 k/3965)))
+                  free_vars={ x/3962 -rename-> apply_arg/3961 }
+                 specialised_args={}) direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.100]
+             project_closure/3968
+               (project_closure >>=/3964 from set_of_closures/3967)
+             k/3895
+               camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:55,11--17]_173_closure
+             Pfield/3974 camlDune__exe__Bench_fib__>>=_23_closure)
+            (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:27,40-52;cps/ocaml/bench_fib.ml:52,6-53}>
+              Pfield/3974 project_closure/3968
+              anon_fn[bench_fib.ml:53,6--20]/3911 k/3895)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.2])))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:27,30--53]_3890_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_8599, anon_fn[bench_fib.ml:27,30--53]/3890)))
+  (camlDune__exe__Bench_fib__set_of_closures_8598
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1276
+        (anon_fn[bench_fib.ml:52,6--53]/3840 = fun l/3841 ->
+          (let
+            (helper/3842 camlDune__exe__Bench_fib__helper_119_closure
+             set_of_closures/3853
+               (set_of_closures id=Dune__exe__Bench_fib.1274
+                 (anon_fn[bench_fib.ml:53,6--20]/3844 = fun r/3845 ->
+                   (let
+                     (apply_arg/3846
+                        (+<{cps/ocaml/bench_fib.ml:53,13-20}> l/3843 r/3845)
+                      set_of_closures/3851
+                        (set_of_closures id=Dune__exe__Bench_fib.1273
+                          (return/3848 *stub* = fun k/3849 ->
+                            (let
+                              (apply_funct/3850
+                                 camlDune__exe__Bench_fib__return_15_closure)
+                              (apply*[return/15]<{cps/ocaml/bench_fib.ml:53,6-20}>
+                                apply_funct/3850 x/3847 k/3849)))
+                           free_vars={ x/3847 -rename-> apply_arg/3846 }
+                          specialised_args={}) direct_call_surrogates={ }
+                          set_of_closures_origin=Dune__exe__Bench_fib.94]
+                      project_closure/3852
+                        (project_closure return/3848 from
+                          set_of_closures/3851))
+                     project_closure/3852))
+                  free_vars={ l/3843 -rename-> l/3841 } specialised_args={})
+                 direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.10]
+             anon_fn[bench_fib.ml:53,6--20]/3854
+               (project_closure anon_fn[bench_fib.ml:53,6--20]/3844 from
+                 set_of_closures/3853)
+             Psubint/3858 Const(8)
+             apply_arg/3859
+               *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:52,15-29}>
+                  helper/3842 Psubint/3858)
+             set_of_closures/3865
+               (set_of_closures id=Dune__exe__Bench_fib.1275
+                 (>>=/3862 *stub* = fun k/3863 ->
+                   (let
+                     (Pfield/3864 camlDune__exe__Bench_fib__>>=_23_closure)
+                     (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:52,6-53}>
+                       Pfield/3864 x/3860 f/3861 k/3863)))
+                  free_vars={ x/3860 -rename-> apply_arg/3859
+                    f/3861 -rename-> anon_fn[bench_fib.ml:53,6--20]/3854 }
+                 specialised_args={}) direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.97]
+             project_closure/3866
+               (project_closure >>=/3862 from set_of_closures/3865))
+            project_closure/3866))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.11])))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3840_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_8598, anon_fn[bench_fib.ml:52,6--53]/3840)))
+  (camlDune__exe__Bench_fib__set_of_closures_8597
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1262
+        (anon_fn[bench_fib.ml:41,24--74]/3808 = fun p1/3809 ->
+          (let
+            (set_of_closures/3817
+               (set_of_closures id=Dune__exe__Bench_fib.1211
+                 (anon_fn[bench_fib.ml:41,50--73]/3812 = fun p2/3813 ->
+                   (let
+                     (apply_arg/3814
+                        (+<{cps/ocaml/bench_fib.ml:41,63-72}> p1/3811
+                          p2/3813))
+                     apply_arg/3814))
+                  free_vars={ p1/3811 -rename-> p1/3809 }
+                 specialised_args={}) direct_call_surrogates={ }
+                 set_of_closures_origin=Dune__exe__Bench_fib.5]
+             anon_fn[bench_fib.ml:41,50--73]/3818
+               (project_closure anon_fn[bench_fib.ml:41,50--73]/3812 from
+                 set_of_closures/3817)
+             Psubint/3822 Const(8)
+             apply_funct/3823 camlDune__exe__Bench_fib__helper_57_closure)
+            (apply*[helper/57]<{cps/ocaml/bench_fib.ml:41,35-73}>
+              apply_funct/3823 Psubint/3822
+              anon_fn[bench_fib.ml:41,50--73]/3818)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.6])))
+  (camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:41,24--74]_3808_closure
+    (Project_closure (camlDune__exe__Bench_fib__set_of_closures_8597, anon_fn[bench_fib.ml:41,24--74]/3808)))
+initialize_symbol
+  (camlDune__exe__Bench_fib__Pintcomp_arg_311 0
+     (let
+       (set_of_closures/3824 camlDune__exe__Bench_fib__set_of_closures_8597
+        anon_fn[bench_fib.ml:41,24--74]/3825
+          camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:41,24--74]_3808_closure
+        Psubint/3827 Const(9)
+        apply_funct/3828 camlDune__exe__Bench_fib__helper_57_closure
+        Pintcomp_arg/286
+          *(apply*[helper/57]<{cps/ocaml/bench_fib.ml:57,17-28;cps/ocaml/bench_fib.ml:43,11-26;cps/ocaml/bench_fib.ml:41,9-74}>
+             apply_funct/3828 Psubint/3827
+             anon_fn[bench_fib.ml:41,24--74]/3825))
+       Pintcomp_arg/286))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__Pintcomp_310 0
+     (let
+       (Pintcomp_arg/344 Const(89)
+        Pintcomp_arg/343 camlDune__exe__Bench_fib__Pintcomp_arg_311.(0)
+        Pintcomp/287
+          (==<{cps/ocaml/bench_fib.ml:57,16-34}> Pintcomp_arg/343
+            Pintcomp_arg/344))
+       Pintcomp/287))
+
+effect
+  (let
+    (Pintcomp/3731 camlDune__exe__Bench_fib__Pintcomp_310.(0)
+     *match*/3729
+       *(if Pintcomp/3731 then begin
+          (let (const_zero/8562 Const(0)) const_zero/8562) end else begin
+          (let
+            (raise_arg/193 camlDune__exe__Bench_fib__Pmakeblock_279
+             raise/194
+               (raise<{cps/ocaml/bench_fib.ml:57,9-34}> raise_arg/193))
+            raise/194)
+          end)
+     const_zero/8563 Const(0))
+    const_zero/8563)
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__apply_arg_3725 0
+     (let
+       (helper/3727 camlDune__exe__Bench_fib__helper_119_closure
+        set_of_closures/3867 camlDune__exe__Bench_fib__set_of_closures_8598
+        anon_fn[bench_fib.ml:52,6--53]/3868
+          camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3840_closure
+        Psubint/3870 Const(9)
+        apply_arg/3871
+          *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:58,17-29;cps/ocaml/bench_fib.ml:55,18-28;cps/ocaml/bench_fib.ml:51,15-29}>
+             helper/3727 Psubint/3870)
+        set_of_closures/3877
+          (set_of_closures id=Dune__exe__Bench_fib.1328
+            (>>=/3874 *stub* = fun k/3875 ->
+              (let
+                (f/8616
+                   camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:52,6--53]_3840_closure
+                 Pfield/3876 camlDune__exe__Bench_fib__>>=_23_closure)
+                (apply*[>>=/23]<{cps/ocaml/bench_fib.ml:51,6-86}> Pfield/3876
+                  x/3872 f/8616 k/3875)))
+             free_vars={ x/3872 -rename-> apply_arg/3871 }
+            specialised_args={}) direct_call_surrogates={ }
+            set_of_closures_origin=Dune__exe__Bench_fib.100]
+        project_closure/3878
+          (project_closure >>=/3874 from set_of_closures/3877))
+       project_closure/3878))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__Pintcomp_arg_308 0
+     (let
+       (apply_arg/3728 camlDune__exe__Bench_fib__apply_arg_3725.(0)
+        x/3882 (project_var x/3872 from >>=/3874=apply_arg/3728)
+        set_of_closures/3896 camlDune__exe__Bench_fib__set_of_closures_8599
+        anon_fn[bench_fib.ml:27,30--53]/3897
+          camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:27,30--53]_3890_closure
+        Pintcomp_arg/289
+          *(apply<{cps/ocaml/bench_fib.ml:58,17-29;cps/ocaml/bench_fib.ml:55,2-28;cps/ocaml/bench_fib.ml:31,28-34;cps/ocaml/bench_fib.ml:51,6-86;cps/ocaml/bench_fib.ml:27,23-53}>
+             x/3882 anon_fn[bench_fib.ml:27,30--53]/3897))
+       Pintcomp_arg/289))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__Pintcomp_307 0
+     (let
+       (Pintcomp_arg/339 Const(89)
+        Pintcomp_arg/338 camlDune__exe__Bench_fib__Pintcomp_arg_308.(0)
+        Pintcomp/290
+          (==<{cps/ocaml/bench_fib.ml:58,16-35}> Pintcomp_arg/338
+            Pintcomp_arg/339))
+       Pintcomp/290))
+effect
+  (let
+    (Pintcomp/3723 camlDune__exe__Bench_fib__Pintcomp_307.(0)
+     *match*/3721
+       *(if Pintcomp/3723 then begin
+          (let (const_zero/8565 Const(0)) const_zero/8565) end else begin
+          (let
+            (raise_arg/212 camlDune__exe__Bench_fib__Pmakeblock_280
+             raise/213
+               (raise<{cps/ocaml/bench_fib.ml:58,9-35}> raise_arg/212))
+            raise/213)
+          end)
+     const_zero/8566 Const(0))
+    const_zero/8566)
+
+let_symbol
+  (camlDune__exe__Bench_fib__fib_cps_m_1096
+    (Set_of_closures (
+      (set_of_closures id=Dune__exe__Bench_fib.1248
+        (fib_cps_m/113 = fun n/116 ->
+          (let
+            (helper/118 camlDune__exe__Bench_fib__helper_119_closure
+             apply_arg/179
+               *(apply*[helper/119]<{cps/ocaml/bench_fib.ml:55,18-28}>
+                  helper/118 n/116)
+             apply_arg/180
+               camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:55,11--17]_173_closure)
+            (apply<{cps/ocaml/bench_fib.ml:55,2-28;cps/ocaml/bench_fib.ml:31,28-34}>
+              apply_arg/179 apply_arg/180)))
+         free_vars={ } specialised_args={}) direct_call_surrogates={ }
+        set_of_closures_origin=Dune__exe__Bench_fib.14])))
+  (camlDune__exe__Bench_fib__fib_cps_m_113_closure
+    (Project_closure (camlDune__exe__Bench_fib__fib_cps_m_1096, fib_cps_m/113)))
+  (camlDune__exe__Bench_fib__Pmakeblock_305 (Block (tag 0,
+    camlDune__exe__Bench_fib__const_immstring_238
+    camlDune__exe__Bench_fib__fib_cps_m_113_closure 10)))
+  (camlDune__exe__Bench_fib__Pmakeblock_304 (Block (tag 0,
+    camlDune__exe__Bench_fib__Pmakeblock_305 0)))
+initialize_symbol
+  (camlDune__exe__Bench_fib__apply_arg_3701 0
+     (let
+       (map/3719 camlDune__exe__Bench_fib__map_1229_closure
+        param/3982 camlDune__exe__Bench_fib__const_immstring_232
+        k'/4020 camlDune__exe__Bench_fib__k'_8601
+        k'/4021 camlDune__exe__Bench_fib__k'_3994_closure
+        symbol/4036 camlCamlinternalFormat__set_of_closures_15530
+        project_closure/4037
+          (project_closure CamlinternalFormat.make_padding/4971 from
+            symbol/4036)
+        acc/4045 Const(0)
+        string_to_caml_string/4051
+          camlCamlinternalFormat__string_to_caml_string_4450_closure
+        apply_arg/4052 camlBenchmark__const_block_1594.(0)
+        apply_arg/4053 camlBenchmark__const_block_1594.(1)
+        full_apply/3986
+          *(apply*[CamlinternalFormat.make_padding/4971]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,21-68;list.ml:90,12-77;list.ml:92,20-23;src/benchmark.ml:324,47-61;printf.ml:41,18-43;printf.ml:39,2-31;camlinternalFormat.ml:1530,4-53}>
+             project_closure/4037 k'/4021 acc/4045 apply_arg/4053
+             apply_arg/4052 string_to_caml_string/4051)
+        r/3987
+          *(apply<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,21-68;list.ml:90,12-77;list.ml:92,20-23;src/benchmark.ml:324,47-61}>
+             full_apply/3986 param/3982)
+        apply_arg/3988 camlDune__exe__Bench_fib__Pmakeblock_304
+        Pmakeblock_arg/3989
+          *(apply*[map/1229]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,21-68;list.ml:90,12-77;list.ml:92,32-39;list.ml:90,12-77}>
+             map/3719 apply_arg/3988)
+        Pmakeblock/3990
+          (makeblock 0<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,21-68;list.ml:90,12-77;list.ml:92,27-39}>
+            r/3987 Pmakeblock_arg/3989))
+       Pmakeblock/3990))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__apply_arg_3700 0
+     (let
+       (apply_arg/3716 camlBenchmark__const_immstring_1586
+        apply_arg/3715 camlDune__exe__Bench_fib__apply_arg_3701.(0)
+        seplen/4058 Const(2)
+        apply_arg/4059 Const(0)
+        apply_funct/4061 camlStdlib__String__sum_lengths_295_closure
+        seplen/4100 Const(2)
+        acc/4102 Const(0)
+        hd/4104
+          (field 0<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,4-12}>
+            apply_arg/3715)
+        Pisint_arg/4105
+          (field 1<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,4-12}>
+            apply_arg/3715)
+        Pisint/4106
+          (isint<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:60,10-12}>
+            Pisint_arg/4105)
+        Pccall_arg/4062
+          *(if Pisint/4106 then begin
+             (let
+               (Paddint_arg/4107
+                  (string.length<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:60,16-25}>
+                    hd/4104)
+                Paddint/4108
+                  (+<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:60,16-31}>
+                    Paddint_arg/4107 acc/4102))
+               Paddint/4108)
+             end else begin
+             (let
+               (apply_arg/4109
+                  (field 1<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,4-12}>
+                    apply_arg/3715)
+                Paddint_arg/4110
+                  (string.length<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,40-49}>
+                    hd/4104)
+                Paddint/4111
+                  (+<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,40-58}>
+                    Paddint_arg/4110 seplen/4100)
+                Paddint/4112
+                  (+<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,39-65}>
+                    Paddint/4111 acc/4102)
+                cond/4113
+                  (>=<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:56,29-35}>
+                    Paddint/4112 acc/4102)
+                apply_arg/4116
+                  *(if cond/4113 then begin Paddint/4112 end else begin
+                     (let
+                       (Pmakeblock/4114 camlStdlib__String__Pmakeblock_2468
+                        raise/4115
+                          (raise<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:56,48-75;stdlib.ml:30,20-45}>
+                            Pmakeblock/4114))
+                       raise/4115)
+                     end))
+               (apply*[Stdlib__String.sum_lengths/295]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,22-46;string.ml:61,16-80}>
+                 apply_funct/4061 Paddint/4112 seplen/4100 apply_arg/4109))
+             end)
+        Pccall/4063
+          (caml_create_bytes<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:76,12-47}>
+            Pccall_arg/4062)
+        apply_funct/4064 camlStdlib__String__unsafe_blits_332_closure
+        apply_arg/4065
+          *(apply*[Stdlib__String.unsafe_blits/332]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:331,6-28;src/benchmark.ml:324,2-68;string.ml:75,10-97}>
+             apply_funct/4064 Pccall/4063 apply_arg/4059 apply_arg/3716
+             seplen/4058 apply_arg/3715))
+       apply_arg/4065))
+
+let_symbol
+  (camlDune__exe__Bench_fib__Pmakeblock_8602 (Block (tag 2,  0
+    camlBenchmark__const_immstring_1655)))
+initialize_symbol
+  (camlDune__exe__Bench_fib__full_apply_3699 0
+     (let
+       (Pfield/3714 camlCamlinternalFormat__make_printf_4967_closure
+        anon_fn[printf.ml:20,14--48]/3713
+          camlStdlib__Printf__anon_fn[printf.ml:20,14--48]_410_closure
+        acc/4276 Const(0)
+        apply_arg/4283 camlBenchmark__const_block_1663
+        Pmakeblock_arg/4284 camlBenchmark__const_immstring_1655
+        Pmakeblock/4285 camlDune__exe__Bench_fib__Pmakeblock_8602
+        full_apply/3692
+          *(apply*[CamlinternalFormat.make_printf/4967]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:329,23-178;printf.ml:31,17-35;printf.ml:27,21-43;printf.ml:20,2-63;camlinternalFormat.ml:1563,4-54}>
+             Pfield/3714 anon_fn[printf.ml:20,14--48]/3713 Pmakeblock/4285
+             apply_arg/4283))
+       full_apply/3692))
+
+effect
+  (let
+    (apply_arg/3710 camlBenchmark__const_immstring_472
+     n/3709 camlDune__exe__Bench_fib__n_8608
+     full_apply/3707 camlDune__exe__Bench_fib__full_apply_3699.(0)
+     apply_arg/3708 camlDune__exe__Bench_fib__apply_arg_3700.(0)
+     sequence/3693
+       *(apply<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:329,23-178}>
+          full_apply/3707 n/3709 apply_arg/3708 apply_arg/3710))
+    sequence/3693)
+initialize_symbol
+  (camlDune__exe__Bench_fib__full_apply_3697 0
+     (let
+       (k'/4316 camlDune__exe__Bench_fib__k'_8604
+        k'/4317 camlDune__exe__Bench_fib__k'_4290_closure
+        Pfield/4320 camlCamlinternalFormat__make_printf_4967_closure
+        acc/4341 Const(0)
+        apply_arg/4348 camlBenchmark__const_block_1699
+        Pmakeblock_arg/4349 camlBenchmark__const_immstring_1696
+        Pmakeblock/4350 camlDune__exe__Bench_fib__Pmakeblock_8605
+        full_apply/3694
+          *(apply*[CamlinternalFormat.make_printf/4967]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,26-55;printf.ml:41,18-43;printf.ml:39,2-31;camlinternalFormat.ml:1563,4-54}>
+             Pfield/4320 k'/4317 Pmakeblock/4350 apply_arg/4348))
+       full_apply/3694))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__apply_arg_3696 0
+     (let
+       (n/3703 camlDune__exe__Bench_fib__n_8608
+        full_apply/3702 camlDune__exe__Bench_fib__full_apply_3697.(0)
+        apply_arg/3695
+          *(apply<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,26-55}>
+             full_apply/3702 n/3703))
+       apply_arg/3695))
+
+initialize_symbol
+  (camlDune__exe__Bench_fib__res_301 0
+     (let
+       (apply_arg/3720 camlDune__exe__Bench_fib__apply_arg_3696.(0)
+        dup_set_of_closures/4505
+          camlDune__exe__Bench_fib__dup_set_of_closures_8607
+        fold_left/4522 camlDune__exe__Bench_fib__fold_left_4512_closure
+        apply_arg/4534 camlDune__exe__Bench_fib__Pmakeblock_304
+        y/4542 Const(14)
+        x/4544 Const(0)
+        cond/4545
+          (caml_greaterequal<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:312,4-68;list.ml:118,18-95;list.ml:121,24-34;src/benchmark.ml:312,37-60;stdlib.ml:75,17-23}>
+            x/4544 y/4542)
+        apply_arg/4539
+          *(if cond/4545 then begin
+             (let (const_zero/8577 Const(0)) const_zero/8577) end else begin
+             (let (const_int/8578 Const(14)) const_int/8578) end)
+        length_name/4370
+          *(apply*[fold_left/4512]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:312,4-68;list.ml:118,18-95;list.ml:121,12-36;list.ml:118,18-95}>
+             fold_left/4522 apply_arg/4539 apply_arg/4534)
+        result_of/4477
+          (set_of_closures id=Dune__exe__Bench_fib.1241
+            (result_of/4380 *stub* = fun result_of/4382 ->
+              (let
+                (param/4386 (field 2<> result_of/4382)
+                 param/4387 (field 1<> result_of/4382)
+                 param/4388 (field 0<> result_of/4382))
+                (apply*[result_of/4381]<> result_of/4381 param/4388
+                  param/4387 param/4386)))
+            (result_of/4381 = fun param/4385 param/4384 param/4383 ->
+              (let
+                (Pccall_arg/4394 camlBenchmark__const_immstring_472
+                 Pccall/4395
+                   (caml_string_equal<{src/benchmark.ml:315,39-48}>
+                     param/4385 Pccall_arg/4394)
+                 apply_arg/4396
+                   *(if Pccall/4395 then begin default_f_name/4372
+                      end else begin param/4385 end)
+                 apply_arg/4397 camlBenchmark__const_block_1492
+                 apply_arg/4398 Const(0)
+                 anon_fn[printf.ml:20,14--48]/4399
+                   camlStdlib__Printf__anon_fn[printf.ml:20,14--48]_410_closure
+                 Pfield/4400 camlCamlinternalFormat__make_printf_4967_closure
+                 full_apply/4401
+                   *(apply*[CamlinternalFormat.make_printf/4967]<{src/benchmark.ml:315,6-79;printf.ml:31,17-35;printf.ml:27,21-43;printf.ml:20,2-63}>
+                      Pfield/4400 anon_fn[printf.ml:20,14--48]/4399
+                      apply_arg/4398 apply_arg/4397)
+                 sequence/4402
+                   *(apply<{src/benchmark.ml:315,6-79}> full_apply/4401
+                      length_name/4379 apply_arg/4396)
+                 Paddint_arg/4407 Const(2)
+                 Paddint/4408
+                   (+<{src/benchmark.ml:317,32-49}> length_name/4379
+                     Paddint_arg/4407)
+                 Pmakeblock_arg/4409 Const(1)
+                 Pmakeblock/4410
+                   (makemutable 0 (int)<{src/benchmark.ml:297,14-22}>
+                     Pmakeblock_arg/4409)
+                 c/4411 Const(' ')
+                 Pfield/4412 camlStdlib__Bytes__make_272_closure
+                 apply_arg/4413
+                   *(apply*[Stdlib__Bytes.make/272]<{src/benchmark.ml:298,15-37;string.ml:41,2-12}>
+                      Pfield/4412 Paddint/4408 c/4411)
+                 print_indent/4426
+                   (set_of_closures id=Dune__exe__Bench_fib.1236
+                     (print_indent/4417 = fun s/4418 ->
+                       (let
+                         (cond/4419
+                            (field 0<{src/benchmark.ml:301,7-13}> first/4415)
+                          sequence/4424
+                            *(if cond/4419 then begin
+                               (let
+                                 (Psetfield_arg/4420 Const(0)
+                                  Psetfield/4421
+                                    (setfield_imm 0<{src/benchmark.ml:301,19-33}>
+                                      first/4415 Psetfield_arg/4420))
+                                 Psetfield/4421)
+                               end else begin
+                               (let
+                                 (apply_funct/4422
+                                    camlStdlib__output_string_763_closure
+                                  stdout/4423 camlStdlib__Pccall_1851.(0))
+                                 (apply*[Stdlib.output_string/763]<{src/benchmark.ml:301,39-58;stdlib.ml:487,21-43}>
+                                   apply_funct/4422 stdout/4423 prefix/4416))
+                               end)
+                          apply_funct/4559
+                            camlStdlib__output_string_763_closure
+                          stdout/4560 camlStdlib__Pccall_1851.(0)
+                          sequence/4561
+                            *(apply*[Stdlib.output_string/763]<{src/benchmark.ml:302,4-11;src/benchmark.ml:299,16-30;stdlib.ml:487,21-43}>
+                               apply_funct/4559 stdout/4560 s/4418)
+                          Pfield/4562 camlStdlib.(38)
+                          Pccall/4563
+                            (caml_ml_flush<{src/benchmark.ml:302,4-11;src/benchmark.ml:299,32-44;stdlib.ml:341,0-54}>
+                              Pfield/4562))
+                         Pccall/4563))
+                      free_vars={ first/4415 -rename-> Pmakeblock/4410
+                        prefix/4416 -rename-> apply_arg/4413 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Benchmark._33]
+                 print_indent/4427
+                   (project_closure print_indent/4417 from print_indent/4426)
+                 repeat/4574 Const(1)
+                 unbox_free_vars_of_closures/4723
+                   (set_of_closures id=Dune__exe__Bench_fib.1240
+                     (loop/4597 = fun nrep/4599 acc/4598 ->
+                       (let
+                         (Pintcomp_arg/4600 Const(1)
+                          Pintcomp/4601
+                            (<<{src/benchmark.ml:191,7-15}> nrep/4599
+                              Pintcomp_arg/4600))
+                         (if Pintcomp/4601 then begin acc/4598 end else begin
+                           (let
+                             (Pccall_arg/4602 Const(0)
+                              Pccall/4603
+                                (caml_gc_compaction<{src/benchmark.ml:193,6-18}>
+                                  Pccall_arg/4602)
+                              apply_funct/4604
+                                camlBenchmark__timeit_810_closure
+                              n/4605 camlDune__exe__Bench_fib__n_8608
+                              *match*/4606
+                                *(apply*[Benchmark.timeit/810]<{src/benchmark.ml:194,18-30}>
+                                   apply_funct/4604 n/4605 f/4595 x/4596)
+                              bm/4607
+                                (field 0<{src/benchmark.ml:194,10-15}>
+                                  *match*/4606)
+                              style/4664 Const(3)
+                              min_cpu/4666
+                                camlDune__exe__Bench_fib__const_float_8609
+                              min_count/4668
+                                camlDune__exe__Bench_fib__const_boxed_int_8610
+                              apply_arg/4670
+                                camlBenchmark__const_immstring_861
+                              fwidth/4674 Const(5)
+                              fdigits/4678 Const(2)
+                              apply_funct/4679
+                                camlBenchmark__to_string_inner_240_closure
+                              apply_arg/4680
+                                *(apply*[Benchmark.to_string_inner/240]<{src/benchmark.ml:195,6-66;src/benchmark.ml:182,19-54}>
+                                   apply_funct/4679 style/4664 fwidth/4674
+                                   fdigits/4678 bm/4607)
+                              Pfield/4681 camlStdlib__^_456_closure
+                              apply_arg/4682
+                                *(apply*[Stdlib.^/456]<{src/benchmark.ml:195,6-66;src/benchmark.ml:182,18-62}>
+                                   Pfield/4681 apply_arg/4680 apply_arg/4670)
+                              sequence/4684
+                                *(apply*[print_indent/4417]<{src/benchmark.ml:195,6-66;src/benchmark.ml:182,2-62}>
+                                   out/4721 apply_arg/4682)
+                              Pbintcomp_arg/4685
+                                (field 5<{src/benchmark.ml:195,6-66;src/benchmark.ml:183,5-12}>
+                                  bm/4607)
+                              Pbintcomp/4686
+                                (Int64.<<{src/benchmark.ml:195,6-66;src/benchmark.ml:183,5-24}>
+                                  Pbintcomp_arg/4685 min_count/4668)
+                              cond/4707
+                                *(if Pbintcomp/4686 then begin
+                                   (let (const_one/8584 Const(1))
+                                     const_one/8584)
+                                   end else begin
+                                   (let
+                                     (Paddfloat_arg/4689
+                                        (field 4<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,50-58}>
+                                          bm/4607)
+                                      Paddfloat_arg/4690
+                                        (field 3<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,38-46}>
+                                          bm/4607)
+                                      Paddfloat_arg/4691
+                                        (field 2<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,27-34}>
+                                          bm/4607)
+                                      Paddfloat_arg/4692
+                                        (field 1<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,16-23}>
+                                          bm/4607)
+                                      Paddfloat/4693
+                                        (+.<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,16-34}>
+                                          Paddfloat_arg/4692
+                                          Paddfloat_arg/4691)
+                                      Paddfloat/4694
+                                        (+.<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,16-46}>
+                                          Paddfloat/4693 Paddfloat_arg/4690)
+                                      Paddfloat/4695
+                                        (+.<{src/benchmark.ml:195,6-66;src/benchmark.ml:74,16-58}>
+                                          Paddfloat/4694 Paddfloat_arg/4689)
+                                      Pfloatcomp/4696
+                                        (<.<{src/benchmark.ml:195,6-66;src/benchmark.ml:183,28-47}>
+                                          Paddfloat/4695 min_cpu/4666))
+                                     (if Pfloatcomp/4696 then begin
+                                       (let (const_one/8585 Const(1))
+                                         const_one/8585)
+                                       end else begin
+                                       (let
+                                         (Pfloatcomp_arg/4699
+                                            camlDune__exe__Bench_fib__Pfloatcomp_arg_8611
+                                          Pfloatcomp_arg/4700
+                                            (field 0<{src/benchmark.ml:195,6-66;src/benchmark.ml:184,9-15}>
+                                              bm/4607)
+                                          Pfloatcomp/4701
+                                            (<.<{src/benchmark.ml:195,6-66;src/benchmark.ml:184,9-20}>
+                                              Pfloatcomp_arg/4700
+                                              Pfloatcomp_arg/4699))
+                                         (if Pfloatcomp/4701 then begin
+                                           (let
+                                             (Pbintcomp_arg/4702
+                                                camlDune__exe__Bench_fib__Pbintcomp_arg_8612
+                                              Pbintcomp_arg/4703
+                                                (field 5<{src/benchmark.ml:195,6-66;src/benchmark.ml:184,24-31}>
+                                                  bm/4607)
+                                              Pbintcomp/4704
+                                                (Int64.<<{src/benchmark.ml:195,6-66;src/benchmark.ml:184,24-39}>
+                                                  Pbintcomp_arg/4703
+                                                  Pbintcomp_arg/4702))
+                                             Pbintcomp/4704)
+                                           end else begin
+                                           (let (const_zero/8586 Const(0))
+                                             const_zero/8586)
+                                           end))
+                                       end))
+                                   end)
+                              sequence/4624
+                                *(if cond/4707 then begin
+                                   (let
+                                     (apply_arg/4708
+                                        camlBenchmark__const_immstring_910)
+                                     (apply*[print_indent/4417]<{src/benchmark.ml:195,6-66;src/benchmark.ml:185,7-78}>
+                                       out/4721 apply_arg/4708))
+                                   end else begin
+                                   (let (const_zero/8587 Const(0))
+                                     const_zero/8587)
+                                   end)
+                              apply_arg/4625
+                                (makeblock 0<{src/benchmark.ml:196,22-33}>
+                                  bm/4607 acc/4598)
+                              Psubint_arg/4626 Const(1)
+                              Psubint/4627
+                                (-<{src/benchmark.ml:196,11-21}> nrep/4599
+                                  Psubint_arg/4626))
+                             (apply*[loop/4597]<{src/benchmark.ml:196,6-33}>
+                               loop/4597 Psubint/4627 apply_arg/4625))
+                           end)))
+                      free_vars={ f/4595 -rename-> param/4384
+                        x/4596 -rename-> param/4383
+                        out/4721 -rename-> print_indent/4427 }
+                     specialised_args={}) direct_call_surrogates={ }
+                     set_of_closures_origin=Benchmark._22]
+                 loop/4629
+                   (project_closure loop/4597 from
+                     unbox_free_vars_of_closures/4723)
+                 apply_arg/4630 Const(0)
+                 bm/4475
+                   *(apply*[loop/4597]<{src/benchmark.ml:318,13-100;src/benchmark.ml:334,14-25;src/benchmark.ml:198,2-16}>
+                      loop/4629 repeat/4574 apply_arg/4630)
+                 Pmakeblock/4476
+                   (makeblock 0<{src/benchmark.ml:320,4-14}> param/4385
+                     bm/4475))
+                Pmakeblock/4476))
+             free_vars={ default_f_name/4372 -rename-> apply_arg/3720
+               length_name/4379 -rename-> length_name/4370 }
+            specialised_args={}) direct_call_surrogates={ }
+            set_of_closures_origin=Benchmark._34]
+        result_of/4478 (project_closure result_of/4380 from result_of/4477)
+        Pfield/4479 camlStdlib__List__map_469_closure
+        result_of/4932 (project_closure result_of/4381 from result_of/4477)
+        param/4933 Const(10)
+        param/4934
+          camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:43,2--26]_99_closure
+        param/4935 camlDune__exe__Bench_fib__const_immstring_232
+        r/4936
+          *(apply*[result_of/4381]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:321,2-25;cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:321,2-25;list.ml:92,20-23}>
+             result_of/4932 param/4935 param/4934 param/4933)
+        apply_arg/4937 camlDune__exe__Bench_fib__Pmakeblock_304
+        Pmakeblock_arg/4939
+          *(apply*[Stdlib__List.map/469]<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:321,2-25;list.ml:92,32-39}>
+             Pfield/4479 result_of/4478 apply_arg/4937)
+        Pmakeblock/4940
+          (makeblock 0<{cps/ocaml/bench_fib.ml:69,4-134;src/benchmark.ml:334,2-105;src/benchmark.ml:321,2-25;list.ml:92,27-39}>
+            r/4936 Pmakeblock_arg/4939))
+       Pmakeblock/4940))
+
+let_symbol
+  (camlDune__exe__Bench_fib__run_cont_45_closure
+    (Project_closure (camlDune__exe__Bench_fib__run_cont_273, run_cont/45)))
+  (camlDune__exe__Bench_fib__Pmakeblock_314 (Block (tag 0,
+    camlDune__exe__Bench_fib__return_15_closure
+    camlDune__exe__Bench_fib__>>=_23_closure camlStdlib__failwith_323_closure
+    camlDune__exe__Bench_fib__run_cont_45_closure
+    camlDune__exe__Bench_fib__Syntax_274)))
+  (camlDune__exe__Bench_fib__const_float_1100 (Allocated_const 0.950000))
+
+effect
+  (let
+    (apply_funct/601 camlBenchmark__tabulate_inner_2526_closure
+     confidence/600 camlDune__exe__Bench_fib__const_float_1100
+     no_parent/596 Const(0)
+     res/317 camlDune__exe__Bench_fib__res_301.(0)
+     *match*/298
+       *(apply*[Benchmark.tabulate_inner/2526]<{cps/ocaml/bench_fib.ml:73,2-14}>
+          apply_funct/601 no_parent/596 confidence/600 res/317))
+    *match*/298)
+
+initialize_symbol
+  (camlDune__exe__Bench_fib 0
+     (let (block_symbol_get_field/3 camlDune__exe__Bench_fib__Pmakeblock_314)
+       block_symbol_get_field/3)
+     (let
+       (block_symbol_get_field/6
+          camlDune__exe__Bench_fib__anon_fn[bench_fib.ml:43,2--26]_99_closure)
+       block_symbol_get_field/6)
+     (let
+       (block_symbol_get_field/9
+          camlDune__exe__Bench_fib__fib_cps_m_113_closure)
+       block_symbol_get_field/9)
+     (let (const_boxed_int/8588 camlDune__exe__Bench_fib__n_8608)
+       const_boxed_int/8588))
+End camlDune__exe__Bench_fib

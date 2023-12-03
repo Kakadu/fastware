@@ -35,7 +35,7 @@ struct
   end
 end
 
-let fib_cps =
+let fib_cps1 =
   let rec helper n k =
     if n <= 1 then k 1
     else helper (n - 1) (fun p1 -> helper (n - 2) (fun p2 -> k (p1 + p2)))
@@ -54,7 +54,7 @@ let fib_cps_m n =
   in
   run_cont Fun.id (helper n)
 
-let () = assert (fib_cps 10 = 89)
+let () = assert (fib_cps1 10 = 89)
 let () = assert (fib_cps_m 10 = 89)
 
 open Benchmark
@@ -68,6 +68,6 @@ let () =
     (* throughputN ~repeat:1  *)
     latencyN iterations
       (* latencyN iterations *)
-      [ ("fib manual cps", fib_cps, 10); ("fib monadic cps", fib_cps_m, 10) ]
+      [ ("fib manual cps", fib_cps1, 10); ("fib monadic cps", fib_cps_m, 10) ]
   in
   tabulate res

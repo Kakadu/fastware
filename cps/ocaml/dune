@@ -1,3 +1,5 @@
 (executable
  (name bench_fib)
- (libraries benchmark))
+ (libraries benchmark)
+ (ocamlopt_flags
+  (:standard -O3 -dflambda)))
