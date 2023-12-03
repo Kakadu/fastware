@@ -1,0 +1,4 @@
+[submodule "cps/ocaml/ocaml-benchmark"]
+	path = cps/ocaml/ocaml-benchmark
+	url = https://github.com/c-cube/ocaml-benchmark.git
+	branch = wip-add-gc-stats

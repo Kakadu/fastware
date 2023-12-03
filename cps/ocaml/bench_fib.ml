@@ -94,4 +94,5 @@ let () =
         ("fib monadic cps", fib_cps_m, num_count);
       ]
   in
-  tabulate res
+  tabulate res;
+  print_gc res
