@@ -61,3 +61,14 @@
  (libraries benchmark)
  (ocamlopt_flags
   (:standard -S -g)))
+
+(executable
+ (name GCD1)
+ (modules GCD1)
+ (libraries benchmark)
+ (foreign_stubs
+  (language cxx)
+  (flags -std=c++20 -march=native -O3 -Wall)
+  (names GCDs))
+ (ocamlopt_flags
+  (:standard -S -g)))
