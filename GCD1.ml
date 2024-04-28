@@ -28,3 +28,23 @@ let () =
          test ~name:"C hybrid_binary_gcd" c_hybrid_binary_gcd;
        ]
 (* It looks like core_bench should be better *)
+
+open Core_bench
+let test ~name f =
+  Bench.Test.create ~name
+  (fun () -> f 1100087778366101931 679891637638612258)
+
+let () =
+  Command_unix.run (Bench.make_command [
+    test ~name:"OCaml naive_gcd" naive_gcd;
+    test ~name:"C naive_gcd" c_naive_gcd;
+    test ~name:"C binary_gcd" c_binary_gcd;
+    test ~name:"C hybrid_binary_gcd" c_hybrid_binary_gcd;
+(*
+    Bench.Test.create ~name:"id"
+      (fun () -> ());
+    Bench.Test.create ~name:"Time.now"
+      (fun () -> ignore (Time_now.nanoseconds_since_unix_epoch ()));
+    Bench.Test.create ~name:"Array.create300"
+      (fun () -> ignore (Stdlib.ArrayLabels.make 300 0)) *)
+  ])

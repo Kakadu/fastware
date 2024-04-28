@@ -65,7 +65,7 @@
 (executable
  (name GCD1)
  (modules GCD1)
- (libraries benchmark)
+ (libraries benchmark core_bench core_unix.command_unix)
  (foreign_stubs
   (language cxx)
   (flags -std=c++20 -march=native -O3 -Wall)
