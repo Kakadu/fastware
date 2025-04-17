@@ -1,0 +1,36 @@
+(rule
+ (deps benches.cpp)
+ (targets benches.s)
+ (mode
+  (promote (until-clean)))
+ (action
+  (run
+   ;clang++-16
+   g++-13
+   -O3
+   -march=native
+   -mtune=native
+   -S
+   %{deps}
+   -I/usr/include/benchmark)))
+
+(rule
+ (deps benches.cpp)
+ (targets benches.exe)
+ (action
+  (run
+   ;clang++-16
+   g++-13
+   -O3
+   -march=native
+   -mtune=native
+   -s
+   %{deps}
+   -o
+   %{targets}
+   -I/usr/include/benchmark
+   /usr/lib/x86_64-linux-gnu/libbenchmark.so
+   -lpthread)))
+
+(cram
+ (deps benches.exe benches.s))
