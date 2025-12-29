@@ -72,3 +72,6 @@
   (names GCDs))
  (ocamlopt_flags
   (:standard -S -g)))
+
+(executable
+ (name ascii))

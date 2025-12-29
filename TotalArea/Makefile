@@ -6,3 +6,8 @@ $(MAIN): main.cpp
 
 clean:
 	$(RM) $(MAIN)
+
+.PHONY: bench
+bench: $(MAIN)
+	sudo cpupower frequency-set --governor performance
+	./$(MAIN)
