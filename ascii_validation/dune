@@ -1,8 +1,30 @@
 (executable
  (name ascii)
  (ocamlopt_flags
-  (:standard -S))
- (libraries benchmark))
+  (:standard -S -O3))
+ (modes native)
+ (libraries benchmark)
+ (foreign_stubs
+  (language c)
+  (names ascii_c)))
 
 (cram
- (deps ./ascii.exe))
+ (deps ./ascii.exe ascii_c.S))
+
+(rule
+ (deps ascii_c.c)
+ (mode
+  (promote (until-clean)))
+ (targets ascii_c.S)
+ (action
+  (run
+   gcc
+   -S
+   -o
+   %{targets}
+   %{deps}
+   -I%{ocaml-config:standard_library}
+   -fno-asynchronous-unwind-tables
+   ; -masm=intel
+   -O3
+   -fno-tree-vectorize)))
