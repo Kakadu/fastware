@@ -1,0 +1,8 @@
+(executable
+ (name ascii)
+ (ocamlopt_flags
+  (:standard -S))
+ (libraries benchmark))
+
+(cram
+ (deps ./ascii.exe))
