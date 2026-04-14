@@ -1,0 +1,92 @@
+(rule
+ (deps a.ml)
+ (targets default.exe)
+ (action
+  (progn
+   (run ocamlopt %{deps} -o %{targets})
+   (run ls -lh .))))
+
+(rule
+ (deps a.ml)
+ (targets mini.exe)
+ (action
+  (progn
+   (run
+    ocamlopt
+    %{deps}
+    -o
+    %{targets}
+    -nostdlib
+    -nopervasives
+    -ccopt
+    -L%{ocaml-config:standard_library}
+    -cclib
+    -lasmrun
+    ; -ccopt
+    ; amd64.o
+    ; -ccopt
+    ; signals_nat.n.o
+    ; -ccopt
+    ; fail_nat.n.o
+    -cclib
+    -lm
+    -verbose)
+   (run ls -lh .))))
+
+(rule
+ (deps a.ml)
+ (targets
+  startup_aux.n.o
+  startup_nat.n.o
+  main.n.o
+  fail_nat.n.o
+  roots_nat.n.o
+  signals.n.o
+  signals_nat.n.o
+  misc.n.o
+  freelist.n.o
+  major_gc.n.o
+  minor_gc.n.o
+  memory.n.o
+  alloc.n.o
+  compare.n.o
+  ints.n.o
+  floats.n.o
+  str.n.o
+  array.n.o
+  io.n.o
+  extern.n.o
+  intern.n.o
+  hash.n.o
+  sys.n.o
+  parsing.n.o
+  gc_ctrl.n.o
+  eventlog.n.o
+  md5.n.o
+  obj.n.o
+  lexing.n.o
+  unix.n.o
+  printexc.n.o
+  callback.n.o
+  weak.n.o
+  compact.n.o
+  finalise.n.o
+  custom.n.o
+  globroots.n.o
+  backtrace_nat.n.o
+  backtrace.n.o
+  dynlink_nat.n.o
+  debugger.n.o
+  meta.n.o
+  dynlink.n.o
+  clambda_checks.n.o
+  afl.n.o
+  bigarray.n.o
+  memprof.n.o
+  domain.n.o
+  skiplist.n.o
+  codefrag.n.o
+  amd64.o)
+ (action
+  (progn
+   (run ar x %{ocaml-config:standard_library}/libasmrun.a))))
